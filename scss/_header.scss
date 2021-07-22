@@ -1,0 +1,95 @@
+.header {
+    .container {
+        @include pad-sm {
+            width: 100%;
+        }
+    }
+}
+.header-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 15px;
+
+    @include pad-sm {
+        width: 100%;
+        padding: 10px 0;
+    }
+    @include mobile-sm {
+        width: 98%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
+.header-panel {
+    display: flex;
+}
+.header-logo {
+    @include pad-sm {
+        margin-left: 10px;
+    }
+}
+.shopping-cart, .dropdown-btn {
+    margin-left: 20px;
+    color: #8D8D8D;
+    display: none;
+
+    @include pad-sm {
+        display: block;
+        margin-right: 10px;
+    }
+}
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        margin-left: 15px;
+
+        a {
+            color: #8D8D8D;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            font-size: 20px;
+            line-height: 30px;
+
+            @include pad-sm {
+                color: #fff;
+            }
+        }
+        span {
+            margin-right: 5px;
+        }
+
+        @include pad-sm {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #fff;
+            background-color: #707070;
+            padding: 16px 0;
+            margin-left: 0;
+        }
+    }
+    .material-icons {
+        @include pad-sm {
+            display: none;
+        }
+    }
+
+    &.active {
+        @include pad-sm {
+            display: flex;
+        }
+    }
+
+    @include pad-sm {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+}

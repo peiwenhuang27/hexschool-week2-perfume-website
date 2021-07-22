@@ -1,0 +1,89 @@
+.banner, .banner .container {
+    min-height: 700px;
+
+    @include pad-sm {
+        width: 100%;
+        min-height: 525px;
+    }
+}
+.banner {
+    background-image: url('../img/banner-desktop.jpg');
+    max-width: 1920px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @include pad-sm {
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+        }
+    }
+
+    @include pad-sm {
+        background-image: url('../img/banner-mobile.jpg');
+        height: 525px;
+    }
+}
+.banner-title {
+    position: relative;
+    right: 0;
+    color: #fff;
+    max-width: 445px;
+    margin-right: 8%;
+    font-family: Roboto;
+
+    h2 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 60px;
+    }
+    p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .banner-btn {
+        width: 80%;
+        text-align: center;
+        border: 2px solid #FFFFFF;
+        border-radius: 30px;
+        margin: 16px 0;
+        padding: 10px 0;
+        transition: all 0.7s;
+
+        &:hover {
+            background-color: #fff;
+            cursor: pointer;
+
+            a {
+                color: #c0c0c0;
+            }
+        }
+
+        @include pad-sm {
+            width: 98%;
+        }
+    }
+    a {
+        color: #fff;
+        font-size: 30px;
+        transition: all 0.7s;
+    }
+
+    @include max {
+        margin-right: 4%;
+    }
+    @include pad {
+        margin-right: 1%;
+    }
+    @include pad-sm {
+        width: 95%;
+        margin: 0 10px;
+        right: auto;
+    }
+}

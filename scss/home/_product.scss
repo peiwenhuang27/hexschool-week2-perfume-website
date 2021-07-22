@@ -1,0 +1,119 @@
+.product {
+    background-color: #E0E0E0;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        @include pad {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    li {
+        width: 30%;
+        margin: 40px 15px;
+
+        @include pad {
+            width: 90%;
+        }
+    }
+}
+.product-img {
+    display: block;
+    min-width: 90%;
+    min-height: 60vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &#prod1 {
+        background-image: url('../img/prod1-desktop.jpg');
+
+        @include pad {
+            background-image: url('../img/prod1-mobile.jpg');
+        }
+    }
+    &#prod2 {
+        background-image: url('../img/prod2-desktop.jpg');
+
+        @include pad {
+            background-image: url('../img/prod2-mobile.jpg');
+        }
+    }
+    &#prod3 {
+        background-image: url('../img/prod3-desktop.jpg');
+
+        @include pad {
+            background-image: url('../img/prod3-mobile.jpg');
+        }
+    }
+    .product-img-hover {
+        width: 100%;
+        min-height: 60vh;
+        background-color: transparent;
+        transition: all 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        @include pad {
+            min-height: 70vh;
+        }
+    }
+    .sold-out-hover {
+        width: 100%;
+        min-height: 60vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        @include pad {
+            min-height: 70vh;
+        }
+    }
+    .sold-out-text {
+        opacity: 1.0;
+        color: #fff;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    @include pad {
+        min-width: 100%;
+        min-height: 70vh;
+    }
+}
+.product-content {
+    font-family: Roboto;
+    color: #000;
+
+    h4 {
+        padding-top: 8px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    p {
+        padding-bottom: 16px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+
+        .discount {
+            text-decoration: line-through;
+            color: #8d8d8d;
+            margin-left: 8px;
+        }
+    }
+}

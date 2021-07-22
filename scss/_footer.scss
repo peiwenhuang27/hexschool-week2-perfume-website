@@ -1,0 +1,126 @@
+.footer {
+    margin: 0 auto;
+}
+.footer-banner {
+    max-width: 100%;
+    min-height: 50vh;
+    background-image: url('https://images.unsplash.com/photo-1532413992378-f169ac26fff0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .banner-title {
+        padding-left: 20%;
+        padding-top: 312px;
+        color: #8d8d8d;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+
+        @include pad {
+            padding-left: 0;
+            padding-top: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @include pad {
+        min-height: 30vh;
+    }
+}
+.subscribe-bar {
+    margin-top: 20px;
+    margin-bottom: 110px;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+
+    form {
+        display: flex;
+        justify-content: flex-start;
+    }
+    input {
+        &[type=email] {
+            padding: 10px;
+            font-weight: medium;
+            font-size: 16px;
+            line-height: 24px;
+            border: 2px solid #916000;
+            border-radius: 4px 0 0 4px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    button {
+        display: block;
+        height: 100%;
+        padding: 10px;
+        background: #916000;
+        color: #fff;
+        font-weight: medium;
+        font-size: 16px;
+        line-height: 24px;
+        border: 2px solid #916000;
+        border-radius: 0 4px 4px 0;
+        transition: all 0.7s;
+
+        &:hover {
+            background: #744e04;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.footer-navbar {
+    background: #916000;
+    padding: 20px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    img {
+        margin-right: 20px;
+
+        @include pad {
+            margin-right: 0;
+        }
+    }
+
+    @include pad {
+        width: 98%;
+        padding-left: 1%;
+        padding-right: 1%;
+        justify-content: space-between;
+    }
+}
+.footer-menu {
+    display: flex;
+
+    li {
+        a {
+            font-family: Roboto;
+            font-weight: 300;
+            margin: 18px;
+            color: #fff;
+        }
+    }
+
+    @include pad {
+        width: 0;
+        display: none;
+    }
+}
