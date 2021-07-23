@@ -1,21 +1,23 @@
-@import "variables";
+@import "../variables";
+@import "../mixin";
 
 .brand-navbar {
     background-color: $brown;
 
     .container {
         ul {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-
             li {
                 a {
                     text-decoration: none;
                     color: #fff;
                     font: normal normal normal 20px/30px Roboto;
+                    
                 }
             }
         }
+    }
+
+    @include mobile {
+        display: none;
     }
 }

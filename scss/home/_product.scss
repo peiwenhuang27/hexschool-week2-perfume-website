@@ -97,6 +97,7 @@
 .product-content {
     font-family: Roboto;
     color: #000;
+    transition: all .2s;
 
     h4 {
         padding-top: 8px;
@@ -115,5 +116,9 @@
             color: #8d8d8d;
             margin-left: 8px;
         }
+    }
+
+    &:hover {
+        color: #3f3f3f;
     }
 }

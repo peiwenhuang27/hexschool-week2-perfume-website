@@ -3,28 +3,40 @@
 }
 .footer-banner {
     max-width: 100%;
-    min-height: 50vh;
+    max-height: 30%;
     background-image: url('https://images.unsplash.com/photo-1532413992378-f169ac26fff0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 
-    .banner-title {
-        padding-left: 20%;
-        padding-top: 312px;
-        color: #8d8d8d;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 48px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
 
-        @include pad {
-            padding-left: 0;
-            padding-top: 280px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .banner-title {
+            padding-left: 20%;
+            padding-top: 10%;
+            padding-bottom: 5%;
+            
+            color: #8d8d8d;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 48px;
+    
+            @include pad {
+                padding-left: 0;
+                padding-top: 60%;
+                padding-bottom: 10%;
+                // padding-top: 280px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
+
+    
 
     @include pad {
         min-height: 30vh;
@@ -32,7 +44,6 @@
 }
 .subscribe-bar {
     margin-top: 20px;
-    margin-bottom: 110px;
     display: inline-block;
     outline: none;
     overflow: hidden;
@@ -98,6 +109,9 @@
         @include pad {
             margin-right: 0;
         }
+    }
+    p {
+        font: normal normal medium 14px/21px Roboto;
     }
 
     @include pad {
