@@ -98,18 +98,29 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
-                        <button type="submit" class="add-btn btn col-md-6 col-6" for="quantity">加入購物車</button>
+                        <button type="submit" class="btn add-btn col-md-6 col-6" for="quantity" data-bs-toggle="modal" data-bs-target="#addCart">加入購物車</button>
+                        <div class="modal fade" id="addCart" tabindex="-1" role="dialog" aria-labelledby="addCartModal" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <h5 class="modal-title" id="addCartModal">已加入購物車</h5>
+                                </div>
+                            </div>
+                        </div>
                     </form>
-                    
-                    
                 </div>
-                <!-- modal -->
                 <div class="mb-3">
-                    <a href="#" class="add-fav"> 
+                    <a href="#" class="add-fav" data-bs-toggle="modal" data-bs-target="#addFav"> 
                         <p class="d-flex align-items-center">
                             <span class="material-icons">favorite</span>加入我的收藏
                         </p>
                     </a>
+                    <div class="modal fade" id="addFav" tabindex="-1" role="dialog" aria-labelledby="addFavModal" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <h5 class="modal-title" id="addFavModal">已加入我的收藏</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="product-notice mb-3">
                     <h3>商品購買須知</h3>

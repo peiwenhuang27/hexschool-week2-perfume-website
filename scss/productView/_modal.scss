@@ -1,0 +1,19 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    padding: 20px;
+    margin-top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        color: $brown-dk;
+    }
+}
