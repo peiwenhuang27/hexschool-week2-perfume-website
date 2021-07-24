@@ -1,33 +1,31 @@
 $(document).ready(function() {
 	$('.dropdown-btn').click(function(event){
 		event.preventDefault();
-		console.log('click');
 		$('.dropdown').toggleClass('active');
 		$('.header-menu').fadeToggle();
 	});
 
-	var quantitiy=0;
-	$('.quantity-plus').click(function(e){	
-		// Stop acting like a button
-		e.preventDefault();
-		// Get the field name
-		var quantity = parseInt($('#quantity').val());
-		console.log(quantitiy);
-		
-		// If is not undefined
-		$('#quantity').val(quantity + 1);
-		// Increment
-	});
-	$('.quantity-minus').click(function(e){
-		// Stop acting like a button
-		e.preventDefault();
-		// Get the field name
-		var quantity = parseInt($('#quantity').val());
-		console.log(quantitiy);
-		// If is not undefined
-		// Increment
-		if(quantity > 0){
-		$('#quantity').val(quantity - 1);
+	function adjFooter(x) {
+		if (x) { 
+			console.log('shorter, adjust footer');
+			$('.footer').css({
+				'position': 'absolute',
+				'bottom': 0,
+				'left': 0,
+				'right': 0
+			});
 		}
-	});
+		else {
+			console.log('no need for adjustment');
+		}
+	}
+	
+	var body = document.body,
+	html = document.documentElement;
+
+	var docHeight = Math.max( body.scrollHeight, body.offsetHeight, html.offsetHeight ),
+	screenHeight = screen.height;
+
+	var x = docHeight < screenHeight;
+	adjFooter(x);
 });

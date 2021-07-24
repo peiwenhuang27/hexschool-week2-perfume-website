@@ -52,10 +52,12 @@
     align-items: center;
 
     > div {
-        width: 60%;
+        max-width: 60%;
+        width: 100%;
 
         @include pad {
-            width: 80%;
+            max-width: 80%;
+            width: 100%;
         }
         @include pad-sm {
             max-width: 555px;
@@ -63,6 +65,7 @@
         }
         @include mobile {
             max-width: 100%;
+            width: 100%;
         }
     }
     h3, h4 {

@@ -21,7 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'></script>
-    <script src="js/all.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
+    <script src="../js/all.js"></script>
 </head>
 <body>
     <div class="header">
@@ -49,7 +50,7 @@
                     </li>
                     <li>
                         <a href="./login.html">
-                            <span class="material-icons">person</span>Log In
+                            <span class="material-icons">person</span>Mypage
                         </a>
                     </li>
                     <li>
@@ -68,41 +69,206 @@
             </div>
         </div>
     </div>
-    <div class="banner">
+    <div class="brand-navbar">
         <div class="container">
-            <div class="banner-title">
-                <h2>Perfume your day</h2>
-                <p>A perfume is like a piece of clothing, a message, a way of presenting oneself a costume that according to the person who wears it.</p>
-                <div class="banner-btn">
-                    <a href="#">Shop Now</a>
-                </div>
-                
-            </div>
+            <ul class="d-flex justify-content-flex-start align-items-center">
+                <li class="m-2"><a href="#">CHANEL</a></li>
+                <li class="m-2"><a href="#">Jo Malone</a></li>
+                <li class="m-2"><a href="#">Curology</a></li>
+                <li class="m-2"><a href="#">Dior</a></li>
+                <li class="m-2"><a href="#">Chloe</a></li>
+                <li class="m-2"><a href="#">ZARA</a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="main">
-
+    <div class="main member-main">
+        <div class="container">
+            <div class="row">
+                <div class="member-center col-md-2 mb-3">
+                    <h2 class="mb-3">會員中心</h2>
+                    <ul class="list-unstyled">
+                    <li class="mb-3"><a href="#" class="text-decoration-none">會員資料修改</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none">訂單查詢</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none">退/換貨申請</a></li>
+                    </ul>
+                </div>
+                <div class="modify-info-box row col-md-10">
+                    <div class="member-modify col-md-8 mb-3">
+                        <form class="personal-info">
+                            <h2 class="mb-3">個人資料修改</h2>
+                            <div class="row mb-3">
+                                <label for="staticEmail" class="col-4 col-md-2 col-form-label">會員帳號</label>
+                                <div class="col-8 col-md-6">
+                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="name" class="col-4 col-md-2 col-form-label">會員姓名</label>
+                                <div class="col-8 col-md-6">
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="gender" class="col-4 col-md-2 col-form-label">會員性別</label>
+                                <div class="col-4 col-md-2">
+                                    <select class="form-select" id="gender">
+                                        <option selected value="M">男</option>
+                                        <option value="F">女</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="email" class="col-4 col-md-2 col-form-label">電子信箱</label>
+                                <div class="col-8 col-md-6">
+                                    <input type="email" placeholder="example@example.com" class="form-control" id="email">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="cellphone" class="col-4 col-md-2 col-form-label">手機號碼</label>
+                                <div class="col-8 col-md-6">
+                                    <input type="tel" class="form-control" id="cellphone">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="address" class="col-4 col-md-2 col-form-label">聯絡地址</label>
+                                <div class="col-8 col-md-6 row"> 
+                                    <div class="col-10 col-md-10">
+                                        <select id="address" class="form-select mb-3">
+                                            <option selected value="tw">台灣及離島</option>
+                                            <option value="foreign">國外</option>
+                                        </select>
+                                        <div class="row g-1 mb-3">
+                                            <div class="col">
+                                                <select id="address" class="form-select">
+                                                    <option selected value="kaohsiung">高雄市</option>
+                                                    <option value="taipei">台北市</option>
+                                                    <option value="new-taipei">新北市</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <select selected id="address" class="form-select">
+                                                    <option value="area1">鹽埕區</option>
+                                                    <option value="area2">...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 mb-3">
+                                        <input type="text" placeholder="請輸入地址" class="form-control mb-3" id="address-detail">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="news-letter" checked>
+                                            <label class="form-check-label" for="news-letter">我願意收到最新優惠情報</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="address" class="col-4 col-md-2 col-form-label">配送地址</label>
+                                <div class="col-8 col-md-6 row"> 
+                                    <div class="col-10 col-md-10">
+                                        <select id="address" class="form-select mb-3">
+                                            <option selected value="tw">台灣及離島</option>
+                                            <option value="foreign">國外</option>
+                                        </select>
+                                        <div class="row g-1 mb-3">
+                                            <div class="col">
+                                                <select id="address" class="form-select">
+                                                    <option selected value="kaohsiung">高雄市</option>
+                                                    <option value="taipei">台北市</option>
+                                                    <option value="new-taipei">新北市</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <select selected id="address" class="form-select">
+                                                    <option value="area1">鹽埕區</option>
+                                                    <option value="area2">...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 mb-3">
+                                        <input type="text" placeholder="請輸入地址" class="form-control mb-3" id="address-detail">
+                                        <button type="submit" class="modify-btn btn btn-primary col-8">確定修改</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </form>
+                        <form class="password-change">
+                            <h2 class="mb-3">修改密碼</h2>
+                            <div class="row mb-3">
+                                <label for="old-pw" class="col-4 col-md-2 col-form-label">舊密碼</label>
+                                <div class="col-8 col-md-6">
+                                    <input type="password" class="form-control" id="old-pw">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="old-pw" class="col-4 col-md-2 col-form-label">新密碼</label>
+                                <div class="col-8 col-md-6">
+                                    <input type="password" class="form-control" id="old-pw">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="old-pw" class="col-4 col-md-2 col-form-label">確認密碼</label>
+                                <div class="col-8 col-md-6">
+                                    <input type="password" class="form-control mb-3" id="old-pw">
+                                    <button type="submit" class="modify-btn btn btn-primary col-8">變更密碼</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="member-info col-md-4 mb-3">
+                        <h2 class="d-flex align-items-center mb-3"><span class="material-icons">person</span>會員編碼 <p>T00020080615</p></h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <div class="row">
+                                    <div class="col-4 col-md-6">購物車</div>
+                                    <div class="col-8 col-md-6">56</div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row">
+                                    <div class="col-4 col-md-6">我的蒐藏</div>
+                                    <div class="col-8 col-md-6">23</div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row">
+                                    <div class="col-4 col-md-6">完成訂單</div>
+                                    <div class="col-8 col-md-6">8</div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row">
+                                    <div class="col-4 col-md-6">會員紅利</div>
+                                    <div class="col-8 col-md-6">2680</div>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="row">
+                                    <div class="col-4 col-md-6">邀請碼</div>
+                                    <div class="col-8 col-md-6 mb-2">TK2075</div>
+                                    <div class="col-12">
+                                        <p>新戶輸入邀請碼即可獲贈紅利點數1000點</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+            </div>
+          </div>
     </div>
 
     <div class="footer">
-        <div class="footer-banner">
-            <div class="container">
-                <div class="banner-title">
-                    <h3>記得<br>訂閱以獲取更多資訊！</h3>
-                    <div class="subscribe-bar">
-                        <form action="#">
-                            <input placeholder="Your email address" type="email">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="footer-navbar">
             <div class="container">
                 <a class="footer-logo" href="#">
-                    <img src="./img/d’Perfumew.png" alt="">
+                    <img src="../img/d’Perfumew.png" alt="logo">
                     <p>© 2020. All Rights Reserved.</p>
                 </a>
                 <ul class="footer-menu">

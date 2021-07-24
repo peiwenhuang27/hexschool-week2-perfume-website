@@ -1,0 +1,18 @@
+@import "memberCenter";
+@import "memberModify";
+@import "memberInfo";
+
+.member-main {
+    margin-bottom: 60px;
+
+    .container {
+        @include mobile {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    @include mobile {
+        margin-bottom: 40px;
+    }
+}

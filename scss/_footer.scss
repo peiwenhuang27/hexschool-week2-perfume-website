@@ -1,5 +1,16 @@
+@import "variables";
+
 .footer {
     margin: 0 auto;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+
+    // @include mobile {
+    //     position: relative;
+    //     bottom: 0;
+    // }
 }
 .footer-banner {
     max-width: 100%;
@@ -109,9 +120,16 @@
         @include pad {
             margin-right: 0;
         }
+        @include mobile {
+            margin-right: 23px;
+        }
     }
     p {
         font: normal normal medium 14px/21px Roboto;
+    }
+
+    &:hover {
+        color: #fff;
     }
 
     @include pad {

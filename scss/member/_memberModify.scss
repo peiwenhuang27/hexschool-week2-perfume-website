@@ -1,0 +1,43 @@
+.modify-info-box {
+    @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+}
+
+.member-modify {
+    h2 {
+        padding-bottom: 8px;
+        font-weight: medium;
+        font-size: 16px;
+        line-height: 22px;
+        font-family: Roboto;
+        border-bottom: 1px solid $gray-700;
+    }
+    label, input, select {
+        color: $gray-700;
+    }
+    input {
+        &[type=checkbox] {
+            border-color: $brown-dk;
+
+            &:checked {
+                background-color: $brown-dk;
+            }
+        }
+    }
+    button {
+        background-color: $brown-dk;
+        border-color: $brown-dk;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: darken($brown-dk, 8%);
+        }
+    }
+
+    .password-change {
+        margin-top: 48px;
+    }
+}

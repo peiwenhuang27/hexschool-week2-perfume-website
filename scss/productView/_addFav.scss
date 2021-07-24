@@ -4,6 +4,11 @@
     p {
         font-size: 16px;
         line-height: 24px;
+        transition: all 0.2s;
+
+        &:hover {
+            color: $brown-dk;
+        }
     }
     .material-icons {
         color: $brown-dk;
