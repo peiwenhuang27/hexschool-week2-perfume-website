@@ -1,0 +1,83 @@
+@import "../variables";
+@import "../mixin";
+
+// $brown-darker: color.scale($brown-dk, $lightness: 30%);
+
+.login-main {
+    margin: 80px auto;
+
+    @include mobile {
+        margin-top: 28px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.login-img {
+
+    background-image: url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    padding-top: 50%;
+
+    @include mobile {
+        margin-bottom: 28px;
+    }
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 0;
+
+    h2 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        font-family: Roboto;
+    }
+
+    @include mobile {
+        padding-left: 0;
+    }
+}
+
+.form-bottom {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .forget-pw {
+        color: $brown-dk;
+        transition: all 0.2s;
+
+        &:hover {
+            color: darken($brown-dk, 8%);
+        }
+    }
+    .reg-btn {
+        color: $brown-dk;
+        background-color: transparent;
+        border-color: $brown-dk;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: lighten($tan, 30%);
+        }
+    }
+    .login-btn {
+        background-color: $brown-dk;
+        border-color: $brown-dk;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: darken($brown-dk, 8%);
+        }
+    }
+}

@@ -1,7 +1,10 @@
+@import "variables";
+
 .header {
     .container {
         @include pad-sm {
-            width: 100%;
+            // max-width: 100%;
+            // width: 100%;
         }
     }
 }
@@ -23,6 +26,24 @@
 }
 .header-panel {
     display: flex;
+
+    @include mobile {
+        a {
+            position: relative;
+            padding: 4px;
+
+            em {
+                font-size: 14px;
+                padding: 0 3px;
+                color: #fff;
+                background-color: $brown;
+                border-radius: 15px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
 }
 .header-logo {
     @include pad-sm {
@@ -31,12 +52,16 @@
 }
 .shopping-cart, .dropdown-btn {
     margin-left: 20px;
-    color: #8D8D8D;
+    color: $gray-600;
     display: none;
 
     @include pad-sm {
         display: block;
         margin-right: 10px;
+
+        &:hover, &:focus {
+            color: $gray-800;
+        }
     }
 }
 .header-menu {

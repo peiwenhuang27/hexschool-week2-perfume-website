@@ -13,11 +13,11 @@ a {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1200px;
     margin: 0 auto;
 
     @include max {
-        max-width: 1100px;
+        max-width: 990px;
     }
     @include max2 {
         max-width: 98%;
