@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 	function adjFooter(x) {
 		if (x) { 
-			console.log('shorter, adjust footer');
+			// console.log('shorter, adjust footer');
 			$('.footer').css({
 				'position': 'absolute',
 				'bottom': 0,
@@ -16,7 +16,7 @@ $(document).ready(function() {
 			});
 		}
 		else {
-			console.log('no need for adjustment');
+			// console.log('no need for adjustment');
 		}
 	}
 	

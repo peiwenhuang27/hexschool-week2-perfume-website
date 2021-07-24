@@ -1154,21 +1154,8 @@ a {
   color: #916019;
 }
 
-.modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal-content {
+.cart-modal-content {
   padding: 20px;
-  margin-top: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1180,7 +1167,7 @@ a {
           align-items: center;
 }
 
-.modal-content .modal-title {
+.cart-modal-content .cart-modal-title {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
