@@ -31,38 +31,31 @@
     }
 }
 .banner-title {
-    position: relative;
     right: 0;
     color: #fff;
     max-width: 445px;
-    margin-right: 8%;
+    margin-right: 100px;
     font-family: Roboto;
 
     h2 {
         font-weight: bold;
         font-size: 40px;
-        line-height: 60px;
     }
     p {
         font-size: 24px;
-        line-height: 36px;
+        margin-bottom: 30px;
     }
     .banner-btn {
-        width: 80%;
-        text-align: center;
+        max-width: 440px;
         border: 2px solid #FFFFFF;
         border-radius: 30px;
-        margin: 16px 0;
-        padding: 10px 0;
+        padding: 10px 100px;
         transition: all 0.7s;
 
         &:hover {
             background-color: #fff;
             cursor: pointer;
-
-            a {
-                color: #c0c0c0;
-            }
+            color: #c0c0c0;
         }
 
         @include pad-sm {
